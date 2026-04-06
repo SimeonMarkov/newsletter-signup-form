@@ -1,0 +1,89 @@
+:root {
+    --ultradark-blue: #021032;
+    --grayblue: #5677A1FF;
+    --lightgray: #8e8e8e;
+    --white: #FFF;
+    --peachpuff: #FFDAB9FF;
+    --orangered: #FF4500FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Robotto, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+ul {
+    list-style-position: outside;
+    padding: 1.3rem;
+}
+
+li {
+    padding-inline-start: 1.5rem;
+}
+
+li::marker {
+    content: url("assets/images/icon-list.svg");
+    padding-inline-start: 3.5rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.email-required {
+    color: var(--orangered);
+}
+
+label {
+    font-weight: bold;
+}
+
+input, button {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+input {
+    border: 2px solid #dad8d8;
+}
+
+.hidden {
+    display: none;
+}
+
+.invalid {
+    background-color: var(--peachpuff);
+    border: 2px solid var(--orangered);
+    color: var(--orangered);
+}
+
+.invalid:focus {
+    border: 2px solid var(--orangered);
+}
+
+button {
+    width: 100%;
+    background-color: var(--ultradark-blue);
+    color: var(--white);
+    border: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: var(--lightgray);
+}
+
+.attribution { font-size: 0.6875rem; text-align: center; margin-block-start: 4rem;}
+.attribution a { color: hsl(228, 45%, 44%); }

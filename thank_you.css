@@ -1,0 +1,66 @@
+.thank-you-container {
+    position: relative;
+    height: 90vh;
+    margin-block-start: 8rem;
+}
+
+img {
+    position: relative;
+    top: -1.5rem;
+    left: 5%;
+}
+
+.thx-message {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+h1 {
+    width: 70vw;
+}
+
+button {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: 20px;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: var(--grayblue);
+    }
+
+    img {
+        width: 5vw;
+        height: 5vh;
+    }
+
+    .thank-you-container {
+        width: 30vw;
+        height: 55vh;
+        margin: 25% auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: var(--white);
+    }
+
+    .thx-message {
+        height: fit-content;
+    }
+
+    .thx-message p {
+        font-size: 0.6rem;
+    }
+
+    h1 {
+        width: 70%;
+    }
+
+    button {
+        position: static;
+        margin-block-start: 2rem;
+    }
+}
