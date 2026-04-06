@@ -4,7 +4,11 @@ const emailRequiredSpan = document.querySelector(".email-required");
 
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("clicked");
+    if(!emailInput.value) {
+        emailRequiredSpan.classList.remove("hidden");
+        emailInput.focus()
+        return;
+    }
     setTimeout(() => {
         sessionStorage.setItem("email", emailInput.value);
         location.assign("thank_you.html")
@@ -19,10 +23,12 @@ emailInput.addEventListener("input", (e) => {
     if(!isEmailValid(e.target.value)) {
         e.target.classList.add("invalid");
         emailRequiredSpan.classList.remove("hidden");
-        submitBtn.disabled = true;
+        submitBtn.classList.remove("enabled");
+        submitBtn.classList.add("disabled");
     } else {
         e.target.classList.remove("invalid");
         emailRequiredSpan.classList.add("hidden");
-        submitBtn.disabled = false;
+        submitBtn.classList.add("enabled");
+        submitBtn.classList.remove("disabled");
     }
 })
