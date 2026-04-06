@@ -29,6 +29,10 @@ img {
     width: 100vw;
 }
 
+h1 {
+    font-size: 4rem;
+}
+
 ul {
     list-style-position: outside;
     padding: 1.3rem;
@@ -50,7 +54,9 @@ li::marker {
 }
 
 .email-required {
+    float: right;
     color: var(--orangered);
+    font-weight: bold;
 }
 
 label {
