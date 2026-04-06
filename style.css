@@ -21,6 +21,10 @@
     padding: 1rem 2rem;
 }
 
+.image {
+    width: 100%;
+}
+
 ul {
     list-style-position: outside;
     padding: 1.3rem;
@@ -87,3 +91,36 @@ button:disabled {
 
 .attribution { font-size: 0.6875rem; text-align: center; margin-block-start: 4rem;}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: var(--ultradark-blue);
+    }
+    main {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50rem;
+        height: fit-content;
+        margin-inline: auto;
+        margin-block-start: 15vh;
+        border-radius: 1rem;
+    }
+
+    img {
+        height: 90%;
+        margin-block-start: 7.5%;
+        margin-inline-end: 2rem;
+    }
+
+    .form-container {
+        height: 70%;
+        margin-block-start: 10%;
+        justify-content: space-around;
+    }
+
+}
